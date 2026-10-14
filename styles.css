@@ -1,0 +1,96 @@
+/* Section produits */
+.grille-produits {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* Fiche produit */
+.carte-produit {
+    border: 1px solid lightgray;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Les images */
+.carte-produit img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Tablette : 2 colonnes à partir de 768px */
+@media (min-width: 768px) {
+    .grille-produits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Ordinateur : 4 colonnes à partir de 1024px */
+@media (min-width: 1024px) {
+    .grille-produits {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* En-tête */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+}
+
+header h1 {
+    color: white;
+}
+
+/* Menu de navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Corps de la page */
+body {
+    margin: 0;
+}
+
+/* Espace autour du contenu principal */
+main {
+    padding: 20px;
+}
+
+/* Bouton "Acheter maintenant" */
+.carte-produit button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carte-produit button:hover {
+    background-color: darkred;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
